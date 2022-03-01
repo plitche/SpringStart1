@@ -1,0 +1,8 @@
+	프로젝트 환경설정 - View 환경설정
+		* src > main > resources > static > index.html 이라고 만들어두면, 도메인으로 들어왔을때 열리는 첫 페이지
+		
+		< spring.io
+		< https://www.thymeleaf.org/
+		
+		* Web 어플리케이션에서 첫번째 진입점이 Controller
+			- Model은 MVC 패턴의 M

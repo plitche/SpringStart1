@@ -1,0 +1,10 @@
+	스프링 웹 개발 기초 - MVC와 템플릿 엔진
+		- Model, View, Controller
+			: 위 3개는 각각 역할을 확실히 나뉘어져야 한다.
+			
+		- localhost:8080/hello-mvc 그대로 하면 에러가 뜬다. -> 파라미터가 없어서
+		- localhost:8080/hello-mvc?name=spring!
+		
+		
+			
+		

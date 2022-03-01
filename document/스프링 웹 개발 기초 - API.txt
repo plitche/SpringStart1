@@ -1,0 +1,8 @@
+	스프링 웹 개발 기초 - API
+		: html을 내리냐, 데이터를 내리냐 에 따라서 달라진다.
+		: view(뷰) 이런것이 없고 그냥 그대로 값이 내려간다. -< html태그가 전혀 없다.
+		
+		@ResponseBody는 http에서 body부분에 직접 return 한 값을 넣어주겠다.
+		 
+		 - getter, setter : 자바 빈 표준 규약
+		 

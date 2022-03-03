@@ -1,0 +1,6 @@
+	회원 관리 예제 - 회원 서비스 테스트
+		* Ctrl + Shift + T : 테스트
+		* static import : Alt + Enter
+		
+		
+		

@@ -1,0 +1,22 @@
+	스프링 빈과 의존관계 - 컴포넌트 스캔과 자동 의존관계 설정
+		* 컴포넌트 스캔과 자동 의존관계 설정
+		@Controller 어노테이션이 있으면 해당 클래스 객체를 생성해서, 스프링이 관리를 한다.
+			1. 스프링이 뜰때 객체를 생성해서 들고 있는다.
+			2. 스프링 컨테이너에서 스프링 빈이 관리된다.
+			3. 스프링이 관리를 하게 되면 다 스프링 컨테이너에 등록을 하고 그 컨테이너에서 가져와 쓰도록 하여야 한다.
+				============================== X =================================
+				private final MemberService memberService = new MemberService(); 
+				
+				============================== O =================================
+				private final MemberService memberService; 
+				@Autowired
+				public MemberController(MemberService memberService) {
+					this.memberService = memberService;
+				}
+			4. @Autowired라고 해주면 컨테이너에 있는 (스프링 빈에 등록되어있는)객체를 가져와서 연결을 해준다. : DI(의존관계 주입)
+			5. 하지만 service 클래스는 순수 자바로 스프링이 알 수 있는 방법이 없다.
+			6. 이를 해결해주기 위해서 @Service 어노테이션을 써준다.
+			
+			
+		* 자바 코드로 직접 스프링 빈 등록하기
+			

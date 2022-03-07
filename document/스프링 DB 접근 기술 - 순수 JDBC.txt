@@ -1,0 +1,4 @@
+	스프링 DB 접근 기술 - 순수 JDBC
+		- implements method : alt + enter
+		ResultSet : 결과를 받음
+		

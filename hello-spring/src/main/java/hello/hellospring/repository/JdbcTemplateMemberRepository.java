@@ -1,21 +1,19 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.sql.DataSource;
 import javax.swing.tree.RowMapper;
-import javax.swing.tree.TreePath;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
 public class JdbcTemplateMemberRepository implements MemberRepository {
+
     private final JdbcTemplate jdbcTemplate;
+
     public JdbcTemplateMemberRepository(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
+
     @Override
     public Member save(Member member) {
         SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
@@ -45,7 +43,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
         List<Member> result = jdbcTemplate.query("select * from member where name = ?", memberRowMapper(), name);
         return result.stream().findAny();
     }
-    
+
     private RowMapper<Member> memberRowMapper() {
         return (rs, rowNum) -> {
             Member member = new Member();

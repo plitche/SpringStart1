@@ -13,6 +13,7 @@ import java.util.Optional;
 
 // @Component (@Service 어노테이션 안에 @Component 어노테이션을 가지고 있다.)
 // @Service
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;

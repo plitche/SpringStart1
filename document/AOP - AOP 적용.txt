@@ -1,0 +1,3 @@
+	AOP - AOP 적용
+		* Aspect Oriented Programming
+		* 공통 관심 사항과 핵심 관심 사항을 분리
